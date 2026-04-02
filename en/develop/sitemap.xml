@@ -184,4 +184,12 @@
          <loc>https://www.freqtrade.io/en/stable/webhook-config/</loc>
          <lastmod>2026-04-02</lastmod>
     </url>
+    <url>
+         <loc>https://www.freqtrade.io/en/stable/plans/2026-04-02-freqtrade-upstream-sync-design/</loc>
+         <lastmod>2026-04-02</lastmod>
+    </url>
+    <url>
+         <loc>https://www.freqtrade.io/en/stable/plans/2026-04-02-freqtrade-upstream-sync/</loc>
+         <lastmod>2026-04-02</lastmod>
+    </url>
 </urlset>
