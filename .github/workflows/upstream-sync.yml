@@ -1,0 +1,40 @@
+name: Sync upstream stable
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream-stable
+  cancel-in-progress: false
+
+jobs:
+  sync-upstream-stable:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out fork default branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure upstream remote
+        run: |
+          if git remote get-url upstream >/dev/null 2>&1; then
+            git remote set-url upstream https://github.com/freqtrade/freqtrade.git
+          else
+            git remote add upstream https://github.com/freqtrade/freqtrade.git
+          fi
+
+      - name: Fetch upstream stable
+        run: git fetch --prune upstream stable
+
+      - name: Force-update origin/upstream-sync from upstream/stable
+        run: git push --force origin refs/remotes/upstream/stable:refs/heads/upstream-sync
+
+      - name: Print synced commit
+        run: git rev-parse refs/remotes/upstream/stable
