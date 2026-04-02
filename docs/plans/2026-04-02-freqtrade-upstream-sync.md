@@ -82,7 +82,7 @@ Expected: local work branch tracks `origin/daniel-dev`.
 
 **Step 1: Write the fetch script**
 
-Add a script that enters `/Users/daniel/Desktop/Cryptobot` and fetches `origin` and `upstream` with pruning.
+Add a script that enters `/Users/daniel/Code/Cryptobot` and fetches `origin` and `upstream` with pruning.
 
 **Step 2: Install the LaunchAgent**
 

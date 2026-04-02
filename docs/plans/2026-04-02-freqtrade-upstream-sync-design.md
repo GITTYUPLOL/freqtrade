@@ -2,11 +2,12 @@
 
 ## Goal
 
-Turn `/Users/daniel/Desktop/Cryptobot` into a fork-backed `freqtrade` workspace that can receive upstream `stable` updates automatically without touching the user's working branch.
+Turn `/Users/daniel/Code/Cryptobot` into a fork-backed `freqtrade` workspace that can receive upstream `stable` updates automatically without touching the user's working branch.
 
 ## Approved Decisions
 
-- `Cryptobot/` is the repository root for the forked `freqtrade` codebase.
+- `/Users/daniel/Code/Cryptobot` is the canonical repository root for the forked `freqtrade` codebase.
+- `/Users/daniel/Desktop/Cryptobot` is a deprecated stub and should not be used for active development.
 - `origin` points to the user's GitHub fork.
 - `upstream` points to `https://github.com/freqtrade/freqtrade.git`.
 - `upstream-sync` mirrors `upstream/stable`.
