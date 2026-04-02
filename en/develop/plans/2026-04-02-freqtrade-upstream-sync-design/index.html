@@ -1861,10 +1861,11 @@
 
 <h1 id="freqtrade-upstream-sync-design">Freqtrade Upstream Sync Design<a class="headerlink" href="#freqtrade-upstream-sync-design" title="Permanent link">&para;</a></h1>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>Turn <code>/Users/daniel/Desktop/Cryptobot</code> into a fork-backed <code>freqtrade</code> workspace that can receive upstream <code>stable</code> updates automatically without touching the user's working branch.</p>
+<p>Turn <code>/Users/daniel/Code/Cryptobot</code> into a fork-backed <code>freqtrade</code> workspace that can receive upstream <code>stable</code> updates automatically without touching the user's working branch.</p>
 <h2 id="approved-decisions">Approved Decisions<a class="headerlink" href="#approved-decisions" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Cryptobot/</code> is the repository root for the forked <code>freqtrade</code> codebase.</li>
+<li><code>/Users/daniel/Code/Cryptobot</code> is the canonical repository root for the forked <code>freqtrade</code> codebase.</li>
+<li><code>/Users/daniel/Desktop/Cryptobot</code> is a deprecated stub and should not be used for active development.</li>
 <li><code>origin</code> points to the user's GitHub fork.</li>
 <li><code>upstream</code> points to <code>https://github.com/freqtrade/freqtrade.git</code>.</li>
 <li><code>upstream-sync</code> mirrors <code>upstream/stable</code>.</li>
